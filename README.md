@@ -1,21 +1,21 @@
-PACKAGE
+# equaler
+--
+    import "github.com/MJKWoolnough/equaler"
 
-package equaler
-    import "/home/michael/Programming/Go/src/github.com/MJKWoolnough/equaler"
 
+## Usage
 
-VARIABLES
-
+```go
 var (
-    EFalse eFalse
-    EThis  eThis
+	EFalse eFalse
+	EThis  eThis
 )
+```
 
+#### type Equaler
 
-TYPES
-
+```go
 type Equaler interface {
-    Equal(Equaler) bool
+	Equal(Equaler) bool
 }
-
-
+```
