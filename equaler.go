@@ -1,6 +1,8 @@
 // Package equaler gives a simple interface to compare objects of arbitrary types.
 package equaler
 
+// Equaler is a simple interface that is used to determing the equalit of two
+// variables
 type Equaler interface {
 	Equal(Equaler) bool
 }
@@ -29,6 +31,8 @@ func (t eThis) String() string {
 }
 
 var (
+	// EFalse represents an Equaler that never matches, even against itself
 	EFalse eFalse
-	EThis  eThis
+	// EThis represents an Equaler that only and alwats matches itself
+	EThis eThis
 )

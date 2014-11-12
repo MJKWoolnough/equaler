@@ -2,6 +2,7 @@
 --
     import "github.com/MJKWoolnough/equaler"
 
+Package equaler gives a simple interface to compare objects of arbitrary types.
 
 ## Usage
 
