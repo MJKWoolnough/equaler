@@ -1,7 +1,7 @@
 // Package equaler gives a simple interface to compare objects of arbitrary types.
 package equaler
 
-// Equaler is a simple interface that is used to determing the equalit of two
+// Equaler is a simple interface that is used to determing the equality of two
 // variables
 type Equaler interface {
 	Equal(Equaler) bool
@@ -9,24 +9,22 @@ type Equaler interface {
 
 type eFalse struct{}
 
-func (f eFalse) Equal(e Equaler) bool {
+func (eFalse) Equal(Equaler) bool {
 	return false
 }
 
-func (f eFalse) String() string {
+func (eFalse) String() string {
 	return "Equaler - False"
 }
 
 type eThis struct{}
 
-func (t eThis) Equal(e Equaler) bool {
-	if _, ok := e.(*eThis); ok || e == nil {
-		return true
-	}
-	return false
+func (eThis) Equal(e Equaler) bool {
+	_, ok := e.(eThis)
+	return ok
 }
 
-func (t eThis) String() string {
+func (eThis) String() string {
 	return "Equaler - This"
 }
 
