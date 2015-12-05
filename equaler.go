@@ -4,12 +4,12 @@ package equaler
 // Equaler is a simple interface that is used to determing the equality of two
 // variables
 type Equaler interface {
-	Equal(Equaler) bool
+	Equal(interface{}) bool
 }
 
 type eFalse struct{}
 
-func (eFalse) Equal(Equaler) bool {
+func (eFalse) Equal(interface{}) bool {
 	return false
 }
 
@@ -19,7 +19,7 @@ func (eFalse) String() string {
 
 type eThis struct{}
 
-func (eThis) Equal(e Equaler) bool {
+func (eThis) Equal(e interface{}) bool {
 	_, ok := e.(eThis)
 	return ok
 }
@@ -31,6 +31,6 @@ func (eThis) String() string {
 var (
 	// EFalse represents an Equaler that never matches, even against itself
 	EFalse eFalse
-	// EThis represents an Equaler that only and alwats matches itself
+	// EThis represents an Equaler that only and always matches itself
 	EThis eThis
 )
