@@ -10,7 +10,7 @@ Package equaler gives a simple interface to compare objects of arbitrary types.
 var (
 	// EFalse represents an Equaler that never matches, even against itself
 	EFalse eFalse
-	// EThis represents an Equaler that only and alwats matches itself
+	// EThis represents an Equaler that only and always matches itself
 	EThis eThis
 )
 ```
@@ -19,7 +19,7 @@ var (
 
 ```go
 type Equaler interface {
-	Equal(Equaler) bool
+	Equal(interface{}) bool
 }
 ```
 
