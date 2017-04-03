@@ -30,7 +30,7 @@ func (eThis) String() string {
 
 var (
 	// EFalse represents an Equaler that never matches, even against itself
-	EFalse eFalse
+	EFalse Equaler = eFalse{}
 	// EThis represents an Equaler that only and always matches itself
-	EThis eThis
+	EThis Equaler = eThis{}
 )
