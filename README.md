@@ -1,6 +1,6 @@
 # equaler
 --
-    import "github.com/MJKWoolnough/equaler"
+    import "vimagination.zapto.org/equaler"
 
 Package equaler gives a simple interface to compare objects of arbitrary types.
 
