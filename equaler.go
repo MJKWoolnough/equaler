@@ -1,7 +1,7 @@
 // Package equaler gives a simple interface to compare objects of arbitrary types.
 package equaler // import "vimagination.zapto.org/equaler"
 
-// Equaler is a simple interface that is used to determing the equality of two
+// Equaler is a simple interface that is used to determine the equality of two
 // variables
 type Equaler interface {
 	Equal(interface{}) bool
