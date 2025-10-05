@@ -14,7 +14,7 @@ type Equaler interface {
 }
 ```
 
-Equaler is a simple interface that is used to determing the equality of two
+Equaler is a simple interface that is used to determine the equality of two
 variables
 
 ```go
